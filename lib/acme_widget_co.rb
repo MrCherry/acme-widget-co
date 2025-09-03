@@ -4,10 +4,12 @@
 require_relative 'acme_widget_co/entity/product'
 require_relative 'acme_widget_co/entity/basket_item'
 require_relative 'acme_widget_co/entity/basket_total'
+require_relative 'acme_widget_co/entity/delivery_rule'
 
 # Core classes
 require_relative 'acme_widget_co/catalogue'
 require_relative 'acme_widget_co/basket'
+require_relative 'acme_widget_co/delivery_calculator'
 
 # The main module for the ACME Widget Co.
 module AcmeWidgetCo
