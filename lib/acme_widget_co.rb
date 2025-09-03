@@ -1,5 +1,14 @@
 # frozen_string_literal: true
 
+# Entity models
+require_relative 'acme_widget_co/entity/product'
+require_relative 'acme_widget_co/entity/basket_item'
+require_relative 'acme_widget_co/entity/basket_total'
+
+# Core classes
+require_relative 'acme_widget_co/catalogue'
+require_relative 'acme_widget_co/basket'
+
 # The main module for the ACME Widget Co.
 module AcmeWidgetCo
 end

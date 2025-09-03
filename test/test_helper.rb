@@ -10,6 +10,12 @@ SimpleCov.start do
 end
 
 require 'acme_widget_co'
+require_relative 'support/catalogue_loader'
 
 module TestHelper
+  module_function
+
+  def fixture_path
+    File.expand_path('fixtures', __dir__)
+  end
 end

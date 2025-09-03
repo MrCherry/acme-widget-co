@@ -1,0 +1,10 @@
+products:
+  - code: R01
+    name: Red Widget
+    price_cents: 3295
+  - code: G01
+    name: Green Widget
+    price_cents: 2495
+  - code: B01
+    name: Blue Widget
+    price_cents: 795
