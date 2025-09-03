@@ -26,9 +26,12 @@ The solution assumes the following:
 - It doesn't have any storage and rely solely on the data passed in test fixtures.
 - It doesn't use rails, as it doesn't need to be a web application and doesn't require any rails specific features.
 - I decided to go with `minitest` instead of `rspec` as it suits the task requirements better due to simplicity.
+- It has has only essential integration tests to verify the overall functionality of the solution (see `test/basic_integration_test.rb` and `test/extended_catalogue_integration_test.rb`)
+- Due to time constraints, I didn't implement unit tests for all the classes.
 - It uses the Strategy pattern to calculate the discount and the Rules pattern to calculate the delivery cost.
 - The Strategy pattern works really well for the offers, as it is very flexible and allows to implement complex discount logic. In this solution, offers do not mutate the basket items, they only calculate the discount.
 - The Rules pattern works great for the delivery cost calculation, in my opinion. It is easy to understand and follow the logic.
+- Due to time constraints, I didn't implement the offer combination logic, as it was not specified in the task assignment.
 
 ## Key components in AcmeWidgetCo module
 
@@ -49,7 +52,12 @@ The solution assumes the following:
 ### Offers
 
 - `Offers::BuyOneRedGetHalf` - The buy one red widget get half price offer. This offer is a simple buy one get one free offer.
+- `Offers::BulkDiscount` - The bulk discount offer. This offer applies a discount to the total cost of the basket if the total cost is greater than or equal to the minimum total price.
+- `Offers::GreenBlueBundle` - The green blue bundle offer. This offer applies a discount to the total cost of the basket if the basket contains at least one green widget and at least one blue widget.
+
 ## Tests
 
 - `test/basic_integration_test.rb` - The basic integration test that tests the basket with the basic catalogue. This test is based on the task requirements in `TASK.md`.
+- `test/extended_catalogue_integration_test.rb` - The extended catalogue integration test that tests the basket with the extended catalogue to make sure that the the solution works with additional products in the catalogue and additional offers in the offer engine.
+- `test/feature/offers_test.rb` - The offers test that tests the offers.
 - `test/unit/delivery_calculator_test.rb` - The delivery calculator unit test that tests the delivery calculator class.

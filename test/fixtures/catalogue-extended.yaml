@@ -1,0 +1,31 @@
+products:
+  - code: P01
+    name: Purple Widget
+    price_cents: 1095
+  - code: Y01
+    name: Yellow Widget
+    price_cents: 895
+  - code: O01
+    name: Orange Widget
+    price_cents: 1295
+  - code: W01
+    name: White Widget
+    price_cents: 1495
+  - code: B02
+    name: Brown Widget
+    price_cents: 1695
+  - code: P02
+    name: Pink Widget
+    price_cents: 1895
+  - code: G02
+    name: Gray Widget
+    price_cents: 2095
+  - code: R01
+    name: Red Widget
+    price_cents: 2295
+  - code: G01
+    name: Green Widget
+    price_cents: 2495
+  - code: B01
+    name: Blue Widget
+    price_cents: 2695

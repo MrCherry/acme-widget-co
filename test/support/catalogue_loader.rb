@@ -9,6 +9,10 @@ module CatalogueLoader
     load_catalogue_from_file('catalogue-basic.yaml')
   end
 
+  def load_extended_catalogue
+    load_catalogue_from_file('catalogue-extended.yaml')
+  end
+
   def load_catalogue_from_file(filename)
     filepath = File.join(TestHelper.fixture_path, filename)
     data = YAML.load_file(filepath)

@@ -14,6 +14,8 @@ require_relative 'acme_widget_co/delivery_calculator'
 # Offer system
 require_relative 'acme_widget_co/offers/base_offer'
 require_relative 'acme_widget_co/offers/buy_one_red_get_half'
+require_relative 'acme_widget_co/offers/bulk_discount'
+require_relative 'acme_widget_co/offers/green_blue_bundle'
 require_relative 'acme_widget_co/offer_engine'
 
 # The main module for the ACME Widget Co.
