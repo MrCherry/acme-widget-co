@@ -9,6 +9,7 @@ module AcmeWidgetCo
     def initialize(catalogue:, offer_engine:, delivery_calculator:)
       @items = []
       @catalogue = catalogue
+      @offer_engine = offer_engine
       @delivery_calculator = delivery_calculator
     end
 
@@ -25,14 +26,16 @@ module AcmeWidgetCo
 
     def total
       subtotal = calculate_subtotal
-      delivery_charge = @delivery_calculator.calculate_for_total(@items, subtotal)
+      discount = @offer_engine.calculate_total_discount(@items)
+      subtotal_after_discount = (subtotal - discount).floor
+      delivery_charge = @delivery_calculator.calculate_for_total(@items, subtotal_after_discount)
 
       total_amount = subtotal_after_discount + delivery_charge
-      
+
       Entity::BasketTotal.new(
         total: total_amount,
         delivery_charge: delivery_charge,
-        discount: 0
+        discount: discount.floor
       )
     end
 

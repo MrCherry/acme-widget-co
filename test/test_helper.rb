@@ -11,6 +11,7 @@ end
 
 require 'acme_widget_co'
 require_relative 'support/catalogue_loader'
+require_relative 'support/basket_factory'
 
 module TestHelper
   module_function
